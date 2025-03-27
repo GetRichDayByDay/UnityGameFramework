@@ -480,7 +480,7 @@ namespace UnityGameFramework.Runtime
         /// <param name="entityId">实体编号。</param>
         /// <param name="entityLogicType">实体逻辑类型。</param>
         /// <param name="entityAssetName">实体资源名称。</param>
-        /// <param name="entityGroupName">实体组名称。</param>
+        /// <param name="entity GroupName">实体组名称。</param>
         /// <param name="priority">加载实体资源的优先级。</param>
         /// <param name="userData">用户自定义数据。</param>
         public void ShowEntity(int entityId, Type entityLogicType, string entityAssetName, string entityGroupName, int priority, object userData)
