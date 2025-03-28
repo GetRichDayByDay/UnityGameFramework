@@ -26,10 +26,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public Entity Entity
         {
-            get
-            {
-                return m_Entity;
-            }
+            get { return m_Entity; }
         }
 
         /// <summary>
@@ -37,14 +34,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public string Name
         {
-            get
-            {
-                return gameObject.name;
-            }
-            set
-            {
-                gameObject.name = value;
-            }
+            get { return gameObject.name; }
+            set { gameObject.name = value; }
         }
 
         /// <summary>
@@ -52,10 +43,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool Available
         {
-            get
-            {
-                return m_Available;
-            }
+            get { return m_Available; }
         }
 
         /// <summary>
@@ -63,10 +51,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool Visible
         {
-            get
-            {
-                return m_Available && m_Visible;
-            }
+            get { return m_Available && m_Visible; }
             set
             {
                 if (!m_Available)
@@ -90,10 +75,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public Transform CachedTransform
         {
-            get
-            {
-                return m_CachedTransform;
-            }
+            get { return m_CachedTransform; }
         }
 
         /// <summary>
@@ -115,9 +97,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 实体回收。
         /// </summary>
-        protected internal virtual void OnRecycle()
-        {
-        }
+        protected internal virtual void OnRecycle() { }
 
         /// <summary>
         /// 实体显示。
@@ -147,18 +127,18 @@ namespace UnityGameFramework.Runtime
         /// <param name="childEntity">附加的子实体。</param>
         /// <param name="parentTransform">被附加父实体的位置。</param>
         /// <param name="userData">用户自定义数据。</param>
-        protected internal virtual void OnAttached(EntityLogic childEntity, Transform parentTransform, object userData)
-        {
-        }
+        protected internal virtual void OnAttached(
+            EntityLogic childEntity,
+            Transform parentTransform,
+            object userData
+        ) { }
 
         /// <summary>
         /// 实体解除子实体。
         /// </summary>
         /// <param name="childEntity">解除的子实体。</param>
         /// <param name="userData">用户自定义数据。</param>
-        protected internal virtual void OnDetached(EntityLogic childEntity, object userData)
-        {
-        }
+        protected internal virtual void OnDetached(EntityLogic childEntity, object userData) { }
 
         /// <summary>
         /// 实体附加子实体。
@@ -166,7 +146,11 @@ namespace UnityGameFramework.Runtime
         /// <param name="parentEntity">被附加的父实体。</param>
         /// <param name="parentTransform">被附加父实体的位置。</param>
         /// <param name="userData">用户自定义数据。</param>
-        protected internal virtual void OnAttachTo(EntityLogic parentEntity, Transform parentTransform, object userData)
+        protected internal virtual void OnAttachTo(
+            EntityLogic parentEntity,
+            Transform parentTransform,
+            object userData
+        )
         {
             CachedTransform.SetParent(parentTransform);
         }
@@ -186,9 +170,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         /// <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
         /// <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
-        protected internal virtual void OnUpdate(float elapseSeconds, float realElapseSeconds)
-        {
-        }
+        protected internal virtual void OnUpdate(float elapseSeconds, float realElapseSeconds) { }
 
         /// <summary>
         /// 设置实体的可见性。
